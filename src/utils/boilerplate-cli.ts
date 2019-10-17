@@ -40,7 +40,7 @@ class BoilerplateCli {
             shell.cd(this.dirName);
             this.insertNameProject();
             if (this.boilerplate === 'juggernaut') {
-              shell.exec('rm -rf .git .github netlify.toml', {async: true});
+              shell.exec('rm -rf .git* netlify.toml', {async: true});
             }
             shell.exec('git init');
             shell.exec('git add .');
